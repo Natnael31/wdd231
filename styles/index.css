@@ -4,8 +4,8 @@
 
     --nav-background-color: rgb(51, 51, 51);
     --nav-hover-link-color: #32021F;
-    /* --nav-link-color: #CEBACF; */
-    /* --nav-hover-link-color: #544B3D; */
+    --main-background-color: #CEBACF;
+    --main-background-color2: #F4EBBE;
     --nav-hover-background-color: #F4EBBE;
 }
 
@@ -95,12 +95,64 @@ nav a:hover {
 main {
     text-align: center;
     color: var(--paragraph-color);
+    margin: 0 20px;
 }
 
+main h1 {
+    background-color: var(--nav-background-color);
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
+}
 
+main section {
+    background-color: var(--main-background-color);
+    color: var(--paragraph-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 
+#course_headers button {
+    padding: 10px 10px;
+    background-color: var(--paragraph-color);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: var(--body-font);
+    width: 30%;
+    margin-bottom: 20px;
+}
 
+#courses {
+    padding: 10px;
+}
+
+#courses button {
+    padding: 10px 10px;
+    background-color: var(--nav-hover-link-color);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: var(--body-font);
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+}
+
+#courses .required {
+    background-color: var(--main-background-color2);
+    color: var(--paragraph-color);
+}
 
 
 footer {
@@ -109,4 +161,5 @@ footer {
     color: white;
     padding: 10px;
     font-size: 20px;
+    margin-top: 20px;
 }
