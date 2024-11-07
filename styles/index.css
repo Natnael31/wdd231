@@ -147,8 +147,9 @@ main section {
     border-radius: 5px;
     font-size: 20px;
     font-family: var(--body-font);
-    width: 30%;
+    width: 25%;
     margin-bottom: 20px;
+    margin-right: 10px;
 }
 
 #course_headers button:hover {
@@ -177,14 +178,6 @@ main section {
     width: 95%;
     display: block;
     margin: 20px auto;
-}
-
-#courses button:hover {
-    background-color: white;
-    color: var(--nav-hover-link-color);
-    font-weight: 900;
-    transform: scale(1.03);
-    transition: transform 0.2s ease-in-out;
 }
 
 #courses .required {
