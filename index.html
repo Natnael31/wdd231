@@ -4,11 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD-231 Web Frontend Development | Natnael Gashaw Endashaw</title>
+    <title>WDD-231 Web Frontend Development | Natnael Gashaw Endashaw_Home Page</title>
+    <meta name="author" content="Natnael Gashaw">
+    <meta name="description" content="Home page for chamber of commerce website">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script defer src="scripts/index.js"></script>
 </head>
 
 <body>
-    <h1>Hello Web Frontend Development</h1>
+    <header>
+        <div>
+            <img src="images/profile-min.webp" alt="profile_picture0" loading="lazy">
+            <h1>Natnael Gashaw</h1>
+        </div>
+
+        <nav>
+            <ul id="navigation">
+                <li id="home"><a href="#">Home</a></li>
+                <li id="chamber"><a href="#">Chamber</a></li>
+                <li id="gitHub"><a href="https://github.com/Natnael31">GitHub Profile</a></li>
+                <li id="linkedIn"><a href="https://linkedin.com/in/natnael-gashaw">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Course Work</h1>
+            <div id="course_list"></div>
+        </section>
+        <section>
+            <h1>Addis Ababa, Ethiopia</h1>
+            <img src="" alt="Ethiopia" loading="lazy">
+        </section>
+        <section>
+            <h1>Web and Computer Programming Certificate</h1>
+            <div>
+                <div id="course_headers">
+                    <div>All</div>
+                    <div>CSE</div>
+                    <div>WDD</div>
+                </div>
+                <div id="courses">
+                    <div>CSE 110</div>
+                    <div>WDD 130</div>
+                    <div>CSE 111</div>
+                    <div>CSE 210</div>
+                    <div>WDD 131</div>
+                    <div>WDD 231</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><span id="currentyear"></span> Natnael Gashaw, Ethiopia</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>

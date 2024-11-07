@@ -1,0 +1,112 @@
+:root {
+    --paragraph-color: #22211f;
+    --body-font: 'Roboto Slab', sans-serif;
+
+    --nav-background-color: rgb(51, 51, 51);
+    --nav-hover-link-color: #32021F;
+    /* --nav-link-color: #CEBACF; */
+    /* --nav-hover-link-color: #544B3D; */
+    --nav-hover-background-color: #F4EBBE;
+}
+
+body {
+    font-family: var(--body-font);
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nav-background-color);
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header div img {
+    width: 100px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    color: white;
+    padding-left: 40px;
+}
+
+nav ul li {
+    display: none;
+}
+
+nav:hover {
+    cursor: pointer;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 5px;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav::before {
+    content: "☰";
+    font-size: 40px;
+    padding: 30px;
+    color: white;
+}
+
+nav.show::before {
+    content: "❌";
+    color: var(--nav-link-color);
+    padding-left: 50px;
+    font-size: 30px;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 5px;
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+}
+
+.show li {
+    display: block;
+    color: white;
+    margin-right: 10px;
+
+}
+
+main {
+    text-align: center;
+    color: var(--paragraph-color);
+}
+
+
+
+
+
+
+
+footer {
+    background-color: var(--nav-background-color);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
