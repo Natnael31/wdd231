@@ -1,3 +1,5 @@
+/* Mobile view */
+
 :root {
     --paragraph-color: #22211f;
     --body-font: 'Roboto Slab', sans-serif;
@@ -21,11 +23,6 @@ header {
     justify-content: space-between;
     background-color: var(--nav-background-color);
 }
-
-/* header div {
-    display: flex;
-    align-items: center;
-} */
 
 header img {
     width: 100px;
@@ -95,10 +92,10 @@ nav a:hover {
 main {
     text-align: center;
     color: var(--paragraph-color);
-    margin: 0 20px;
+    margin: 20px 20px;
 }
 
-main h1 {
+main h2 {
     background-color: var(--nav-background-color);
     color: white;
     padding: 20px;
@@ -112,6 +109,24 @@ main section {
     color: var(--paragraph-color);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#main_image {
+    padding: 20px;
+    margin-top: -10px;
+}
+
+#main_image img {
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+#course_headers {
+    border-bottom: 1px solid rgb(151, 150, 150);
+    margin: 0 20px;
 }
 
 #course_headers button {
@@ -129,6 +144,14 @@ main section {
     margin-bottom: 20px;
 }
 
+#course_headers button:hover {
+    background-color: white;
+    color: var(--paragraph-color);
+    font-weight: 900;
+    transform: scale(1.03);
+    transition: transform 0.2s ease-in-out;
+}
+
 #courses {
     padding: 10px;
 }
@@ -144,16 +167,23 @@ main section {
     border-radius: 5px;
     font-size: 20px;
     font-family: var(--body-font);
-    width: 100%;
+    width: 95%;
     display: block;
     margin: 20px auto;
+}
+
+#courses button:hover {
+    background-color: white;
+    color: var(--nav-hover-link-color);
+    font-weight: 900;
+    transform: scale(1.03);
+    transition: transform 0.2s ease-in-out;
 }
 
 #courses .required {
     background-color: var(--main-background-color2);
     color: var(--paragraph-color);
 }
-
 
 footer {
     background-color: var(--nav-background-color);
@@ -162,4 +192,42 @@ footer {
     padding: 10px;
     font-size: 20px;
     margin-top: 20px;
+}
+
+/* Desktop view css code */
+
+@media screen and (min-width: 820px) {
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav::before {
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 5px 20px;
+
+    }
+
+    main {
+        display: grid;
+    }
+
+    #section_1 {
+        grid-column: 1/5;
+        margin-right: 10px;
+    }
+
+    #section_2 {
+        grid-column: 5/5;
+    }
+
+
+    #section_3 {
+        grid-template-columns: 5/5;
+    }
 }
