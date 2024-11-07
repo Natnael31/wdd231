@@ -24,15 +24,20 @@ header {
     background-color: var(--nav-background-color);
 }
 
+header div {
+    display: flex;
+    align-items: center;
+}
+
 header img {
     width: 100px;
     height: 120px;
     padding: 10px;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px rgba(182, 148, 148, 0.3);
 }
 
-header h1 {
+header div h1 {
     color: white;
     padding-left: 5px;
 }
@@ -70,6 +75,10 @@ nav.show::before {
     font-size: 30px;
 }
 
+.active::before {
+    content: "🔖";
+}
+
 nav ul li:hover {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
@@ -85,8 +94,6 @@ nav a:hover {
 .show li {
     display: block;
     color: white;
-    margin-right: 10px;
-
 }
 
 main {
@@ -194,13 +201,44 @@ footer {
     margin-top: 20px;
 }
 
-/* Desktop view css code */
+/* Desktop view  */
 
 @media screen and (min-width: 820px) {
+
+    header {
+        display: block;
+    }
+
+    header div {
+        display: flex;
+        flex-direction: row;
+        margin-left: 300px;
+    }
+
+    header img {
+        width: 80px;
+        height: 100px;
+        margin-right: 20px;
+        box-shadow: none;
+    }
+
+    nav {
+        background-color: var(--main-background-color);
+    }
 
     nav ul {
         display: flex;
         justify-content: space-between;
+        padding: 20px;
+
+    }
+
+    nav ul li a {
+        color: var(--paragraph-color);
+    }
+
+    nav a:hover {
+        font-weight: 700;
     }
 
     nav::before {
@@ -215,19 +253,21 @@ footer {
 
     main {
         display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
     }
-
-    #section_1 {
-        grid-column: 1/5;
-        margin-right: 10px;
-    }
-
-    #section_2 {
-        grid-column: 5/5;
-    }
-
 
     #section_3 {
-        grid-template-columns: 5/5;
+        grid-column: span 2;
+    }
+
+    main h2 {
+        margin-top: 0;
+    }
+
+    #courses {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
