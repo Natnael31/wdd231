@@ -15,7 +15,7 @@ const home = document.getElementById("home");
 const chamber = document.getElementById("chamber");
 const github = document.getElementById("github");
 const linkedIn = document.getElementById("linkedIn")
-
+home.classList.add('active');
 home.addEventListener("click", () => {
     home.classList.add('active');
     chamber.classList.remove('active');
