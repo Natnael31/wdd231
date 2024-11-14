@@ -36,6 +36,11 @@ h3 {
     height: 400px;
 }
 
+footer {
+    text-align: center;
+    font-weight: 600;
+}
+
 
 @media screen and (min-width:780px) {
     main div {
