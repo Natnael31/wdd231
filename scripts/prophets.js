@@ -15,7 +15,7 @@ async function getProphetData() {
         const response = await fetch(url);
         const data = await response.json();
         // console.table(data.prophets);
-        // console.log(data.prophets)
+        console.log(data.prophets)
         displayProphets(data.prophets)
     } catch (error) {
         console.error();
@@ -32,8 +32,13 @@ const displayProphets = (prophets) => {
         let card = document.createElement('section');
         let fullName = document.createElement('h2');
         let portrait = document.createElement('img');
+        let birthDate = document.createElement('h3');
+        let placeOfBirth = document.createElement('h3');
+
 
         fullName.textContent = `${prophet.name} ${prophet.lastname}`;
+        birthDate.textContent = prophet.birthdate;
+        placeOfBirth.textContent = prophet.birthplace;
         portrait.setAttribute('src', prophet.imageurl);
         portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`);
         portrait.setAttribute('loading', 'lazy');
@@ -41,6 +46,8 @@ const displayProphets = (prophets) => {
         portrait.setAttribute('height', '440');
 
         card.appendChild(fullName);
+        card.appendChild(birthDate);
+        card.appendChild(placeOfBirth);
         card.appendChild(portrait);
 
         cards.appendChild(card);
