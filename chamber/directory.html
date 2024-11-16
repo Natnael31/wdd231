@@ -13,6 +13,7 @@
         content="https://natnael31.github.io/wdd231/chamber/images/chamber-openg-graph-image.webp">
     <meta propert="og:url" content="https://natnael31.github.io/wdd231/chamber/directory.html">
     <meta property="og:image:alt" content="Chamber Directories and Contacts">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="icon" href="../favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,15 +27,15 @@
 <body>
     <header>
         <div>
-            <img src="images/profile-min.webp" alt="profile_picture0" loading="lazy">
+            <img src="images/logo.webp" alt="Logo" loading="lazy">
             <h1>Addis Ababa <small>Chamber of Commerce</small></h1>
         </div>
         <nav>
             <ul id="navigation">
                 <li id="home"><a href="#">Home</a></li>
                 <li id="directory"><a href="#">Directory</a></li>
-                <li id="join"><a href="https://github.com/Natnael31">Join</a></li>
-                <li id="discover"><a href="https://linkedin.com/in/natnael-gashaw">Discover</a></li>
+                <li id="join"><a href="#">Join</a></li>
+                <li id="discover"><a href="#">Discover</a></li>
             </ul>
         </nav>
     </header>
@@ -42,13 +43,24 @@
     <main>
         <section id="hero">
             <img src="images/hero.webp" alt="Hero image" loading="lazy">
+            <div id="keynotes">
+                <ul>
+                    <li><strong>Prof. Dawit</strong> – The Future of Local Business: Trends and Innovations - 9:00am
+                    </li>
+                    <li><strong>Dr. Emilya</strong>Linda Johnson – Building Stronger Communities: The Role of Small
+                        Businesses - 10:00am</li>
+                    <li><strong>Mrs. Betty</strong> – Leveraging Technology for Small Business Success - 11:00am</li>
+                </ul>
+            </div>
         </section>
         <div id="main-header">Home</div>
 
         <section id="events">
             <div id="event-1">
                 <h3>Events</h3>
-                <div class="body">events</div>
+                <div id="event-list" class="body">event-1 <br>event-2 <br>event-3 <br>event-4 <br>event-5 <br>event-6
+                    <br>event-7
+                </div>
             </div>
 
             <div id="weather-1">
@@ -80,6 +92,8 @@
                 </div>
             </div>
         </section>
+
+        <div id="cards"></div>
 
     </main>
 
