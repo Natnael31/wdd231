@@ -186,6 +186,16 @@ main ul li {
     padding-left: 10px;
 }
 
+#cards {
+    background-color: var(--main-background-color);
+}
+
+#cards h3 {
+    color: var(--paragraph-color);
+    background-color: var(--main-background-color);
+
+}
+
 footer {
     background-color: var(--nav-background-color);
     text-align: center;

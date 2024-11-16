@@ -2,7 +2,7 @@
 
 // Burger code
 const ham = document.querySelector('nav');
-const list = document.getElementById("navigation");
+const list = document.getElementById('navigation');
 
 ham.addEventListener('click', () => {
     list.classList.toggle('show');
@@ -11,11 +11,11 @@ ham.addEventListener('click', () => {
 
 
 // header way finding code
-const home = document.getElementById("home");
-const directory = document.getElementById("directory");
-const join = document.getElementById("join");
-const discover = document.getElementById("discover");
-const mainHeader = document.getElementById("main-header");
+const home = document.getElementById('home');
+const directory = document.getElementById('directory');
+const join = document.getElementById('join');
+const discover = document.getElementById('discover');
+const mainHeader = document.getElementById('main-header');
 
 home.classList.add('active');
 home.addEventListener("click", () => {
@@ -23,7 +23,7 @@ home.addEventListener("click", () => {
     directory.classList.remove('active');
     join.classList.remove('active');
     discover.classList.remove('active');
-    mainHeader.textContent = "Home";
+    mainHeader.textContent = 'Home';
 })
 
 directory.addEventListener("click", () => {
@@ -31,7 +31,7 @@ directory.addEventListener("click", () => {
     home.classList.remove('active');
     join.classList.remove('active');
     discover.classList.remove('active');
-    mainHeader.textContent = "Directory";
+    mainHeader.textContent = 'Directory';
 })
 
 join.addEventListener("click", () => {
@@ -39,7 +39,7 @@ join.addEventListener("click", () => {
     home.classList.remove('active');
     directory.classList.remove('active');
     discover.classList.remove('active');
-    mainHeader.textContent = "Join";
+    mainHeader.textContent = 'Join';
 })
 
 discover.addEventListener("click", () => {
@@ -47,12 +47,12 @@ discover.addEventListener("click", () => {
     home.classList.remove('active');
     directory.classList.remove('active');
     join.classList.remove('active');
-    mainHeader.textContent = "Discover";
+    mainHeader.textContent = 'Discover';
 })
 
 
 // Main code
-const cards = document.getElementById("cards");
+const cards = document.getElementById('cards');
 const url = "../chamber/data/memeber.json"
 
 async function getMemeberData() {
@@ -70,22 +70,25 @@ const displayMemebers = (members) => {
     members.forEach((member) => {
         let card = document.createElement('section');
         let businessName = document.createElement('h2');
+        let industry = document.createElement('p');
         let logo = document.createElement('img');
-        let birthDate = document.createElement('h3');
+        let email = document.createElement('h3');
         let placeOfBirth = document.createElement('h3');
 
 
-        businessName.textContent = `${member.name} ${member.lastname}`;
-        birthDate.textContent = member.birthdate;
+        businessName.textContent = `${member.name}`;
+        industry.textContent = `${member.industry}`
+        email.textContent = member.email;
         placeOfBirth.textContent = member.birthplace;
-        logo.setAttribute('src', member.imageurl);
-        logo.setAttribute('alt', `logo of ${member.name} ${member.lastname}`);
+        logo.setAttribute('src', member.image_file);
+        logo.setAttribute('alt', `logo of ${member.name}`);
         logo.setAttribute('loading', 'lazy');
-        logo.setAttribute('width', '340');
-        logo.setAttribute('height', '440');
+        logo.setAttribute('width', '100');
+        logo.setAttribute('height', '100');
 
         card.appendChild(businessName);
-        card.appendChild(birthDate);
+        card.appendChild(industry)
+        card.appendChild(email);
         card.appendChild(placeOfBirth);
         card.appendChild(logo);
 
