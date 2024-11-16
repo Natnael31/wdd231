@@ -119,7 +119,7 @@ const displayMemebers = (members) => {
         cards.appendChild(card);
     });
 }
-
+cards.classList.add('grid');
 listCards.addEventListener('click', () => {
     // alert('hello');
     cards.classList.add('list')
