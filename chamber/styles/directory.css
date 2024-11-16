@@ -154,6 +154,29 @@ main ul li {
     font-weight: 900;
 }
 
+button {
+    padding: 10px 10px;
+    background-color: var(--paragraph-color);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: var(--body-font);
+    width: 25%;
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: var(--nav-hover-link-color);
+    color: white;
+    font-weight: 900;
+    transform: scale(1.03);
+    transition: transform 0.2s ease-in-out;
+}
+
 #weather-image img {
     width: 120px;
     margin-left: 10px;
@@ -183,17 +206,37 @@ main ul li {
 }
 
 #weather-2 p {
-    padding-left: 10px;
+    padding-top: 20px;
+    padding-left: 40px;
+    font-size: 1.7em;
 }
 
-#cards {
+.card-container {
+    border-radius: 10px;
     background-color: var(--main-background-color);
+    align-items: center;
+}
+
+.card-1 {
+    border-bottom: solid 1x gray;
+}
+
+.card-3 {
+    margin-left: -20px;
+}
+
+.card-4 {
+    display: flex;
+    font-size: 0.9rem;
+    padding: 10px;
+    border-top: 1px solid grey;
 }
 
 #cards h3 {
     color: var(--paragraph-color);
     background-color: var(--main-background-color);
-
+    text-align: center;
+    margin-bottom: -25px;
 }
 
 footer {
@@ -273,6 +316,28 @@ footer a img:hover {
 
     #weather-1 ul {
         font-size: 0.8em;
+    }
+
+    #weather-2 p {
+        padding-top: 0px;
+        font-size: 1em;
+        padding-left: 10px;
+    }
+
+    /* #cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 10px;
+    } */
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 10px;
+    }
+
+    .list {
+        display: block;
     }
 
     footer {
