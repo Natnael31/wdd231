@@ -1,0 +1,26 @@
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    background-color: aqua;
+    text-align: center;
+    padding: 10px;
+}
+
+figcaption {
+    font-weight: 700;
+}
+
+footer {
+    background-color: aqua;
+    padding: 20px;
+    font-weight: 700;
+}
