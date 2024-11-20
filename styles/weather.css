@@ -4,6 +4,12 @@ body {
     margin: 0 auto;
 }
 
+main {
+    background-color: rgb(219, 208, 208);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
 figure {
     display: flex;
     align-items: center;
