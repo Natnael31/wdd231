@@ -123,8 +123,9 @@ main #events,
 #join-button {
     position: absolute;
     opacity: 0.9;
+    width: 40%;
     top: 200px;
-    left: 20px;
+    left: 30px;
     background-color: black;
 }
 
