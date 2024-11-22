@@ -119,15 +119,12 @@ main #events,
     /* margin-top: -10px; */
 }
 
-#join-chamber {
-    position: absolute;
-    opacity: 0.9;
-    top: 300px;
-    left: 20px;
-    width: 150%;
-}
 
 #join-button {
+    position: absolute;
+    opacity: 0.9;
+    top: 200px;
+    left: 20px;
     background-color: black;
 }
 
@@ -153,6 +150,7 @@ main h3 {
 main ul li {
     list-style: none;
     text-align: left;
+    margin-left: 20px;
 }
 
 #main-header {
@@ -189,8 +187,8 @@ button:hover {
 }
 
 #weather-image img {
-    width: 120px;
-    margin-left: 10px;
+    width: 50px;
+    margin-left: 100px;
 }
 
 #event-1,
@@ -205,6 +203,7 @@ button:hover {
 
 #weather-1 ul {
     margin-left: -40px;
+    font-size: 1.2em;
 }
 
 #weather-image {
@@ -313,6 +312,10 @@ footer a img:hover {
         padding: 5px 20px;
     }
 
+    #join-button {
+        top: 200px;
+    }
+
     #keynotes {
         font-size: 0.9em;
         width: 400px;
@@ -325,7 +328,8 @@ footer a img:hover {
     }
 
     #weather-image img {
-        width: 60px;
+        margin-left: 20px;
+        width: 56px;
     }
 
 
@@ -338,12 +342,6 @@ footer a img:hover {
         font-size: 1em;
         padding-left: 10px;
     }
-
-    /* #cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 10px;
-    } */
 
     .grid {
         display: grid;

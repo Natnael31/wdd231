@@ -4,6 +4,7 @@
 const ham = document.querySelector('nav');
 const list = document.getElementById('navigation');
 
+
 ham.addEventListener('click', () => {
     list.classList.toggle('show');
     ham.classList.toggle('show');
@@ -55,7 +56,14 @@ discover.addEventListener("click", () => {
 const cards = document.getElementById('cards');
 const gridCards = document.getElementById('grid');
 const listCards = document.getElementById('list');
+const weatherIcon = document.getElementById('weather-icon');
+const weather_data = document.getElementById('weather-data');
+const weather_forecast = document.getElementById('weather-forecast');
+
 const url = "../chamber/data/memeber.json"
+const weather_url = 'https://api.openweathermap.org/data/2.5/weather?&units=imperial&lat=9&lon=38.74&appid=4ed520167b53b456179e69213b3fee16';
+const forcast_weather_url = 'https://api.openweathermap.org/data/2.5/forecast?&units=imperial&lat=9&lon=38.74&appid=4ed520167b53b456179e69213b3fee16';
+
 
 async function getMemeberData() {
     const memebers = await fetch(url);
@@ -65,6 +73,79 @@ async function getMemeberData() {
 }
 
 getMemeberData();
+
+// fetch weather
+async function apiFetch() {
+    try {
+        const response = await fetch(weather_url);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            displayResults(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+apiFetch();
+
+async function apiForecastFetch() {
+    try {
+        const response = await fetch(forcast_weather_url);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            displayForecastResults(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+apiForecastFetch();
+
+// Display Weather data
+
+function displayResults(data) {
+    let currentTemp = document.createElement('li');
+    let weather_description = document.createElement('li');
+    currentTemp.innerHTML = `<strong>Current tempreature</strong>: ${data.main.temp}&deg;F`;
+    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    let desc = data.weather[0].description;
+    weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('width', 50);
+    weather_description.innerHTML = `<strong>Weather-description</strong>: ${desc}`;
+    weather_data.appendChild(weatherIcon);
+    weather_data.appendChild(currentTemp);
+    weather_data.appendChild(weather_description);
+}
+
+function displayForecastResults(data) {
+
+    let weather_array = data.list;
+
+    weather_array.forEach((data) => {
+        let dayIndex = weather_array.indexOf(data);
+
+        if (dayIndex == 2 || dayIndex == 10 || dayIndex == 18) {
+            let temp = document.createElement('p');
+            const dt_txt = data.dt_txt;
+            const date = new Date(dt_txt);
+
+            const options = { weekday: 'long' };
+            const formattedDate = date.toLocaleDateString('en-US', options);
+
+            temp.innerHTML = `<strong>${formattedDate}</strong>: ${data.main.temp}&deg;F`;
+            weather_forecast.appendChild(temp);
+        }
+
+    });
+}
 
 // Display memebers
 
