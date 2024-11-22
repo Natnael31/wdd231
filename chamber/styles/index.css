@@ -119,17 +119,22 @@ main #events,
     /* margin-top: -10px; */
 }
 
-#keynotes {
-    opacity: 0.7;
+#join-chamber {
     position: absolute;
-    font-size: 0.6rem;
-    width: 300px;
-    color: white;
-    background-color: black;
-    bottom: 10px;
-    right: 10px;
-    border-radius: 10px;
+    opacity: 0.9;
+    top: 300px;
+    left: 20px;
+    width: 150%;
+}
 
+#join-button {
+    background-color: black;
+}
+
+#join-button:hover {
+    color: white;
+    background-color: var(--nav-hover-link-color);
+    transform: scale(1.1);
 }
 
 main h3 {

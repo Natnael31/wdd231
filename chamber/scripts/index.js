@@ -17,7 +17,7 @@ const join = document.getElementById('join');
 const discover = document.getElementById('discover');
 const mainHeader = document.getElementById('main-header');
 
-directory.classList.add('active');
+home.classList.add('active');
 home.addEventListener("click", () => {
     home.classList.add('active');
     directory.classList.remove('active');
@@ -67,56 +67,62 @@ async function getMemeberData() {
 getMemeberData();
 
 // Display memebers
-
+var count = 0;
 const displayMemebers = (members) => {
+
+
     members.forEach((member) => {
-        let card = document.createElement('section');
-        let card1 = document.createElement('section');
-        let card2 = document.createElement('section');
-        let card3 = document.createElement('section');
-        let card4 = document.createElement('section');
 
-        let businessName = document.createElement('h3');
-        let industry = document.createElement('p');
-        let logo = document.createElement('img');
-        let address = document.createElement('ul');
-        let email = document.createElement('li');
-        let phone = document.createElement('li');
-        let website = document.createElement('li');
+        if (count < 3) {
+            let card = document.createElement('section');
+            let card1 = document.createElement('section');
+            let card2 = document.createElement('section');
+            let card3 = document.createElement('section');
+            let card4 = document.createElement('section');
 
-
-        businessName.textContent = `${member.name}`;
-        industry.textContent = `${member.industry}`
-        email.innerHTML = `<strong>email</strong>: ${member.email}`;
-        phone.innerHTML = `<strong>Phone</strong>: ${member.phone_number}`;
-        website.innerHTML = `<strong>Url</strong>: ${member.website_url}`;
-        logo.setAttribute('src', member.image_file);
-        logo.setAttribute('alt', `logo of ${member.name}`);
-        logo.setAttribute('loading', 'lazy');
-        logo.setAttribute('width', '100');
-        logo.setAttribute('height', '100');
-
-        card.classList.add('card-container');
-        card1.classList.add('card-1');
-        card2.classList.add('card-2');
-        card3.classList.add('card-3');
-        card4.classList.add('card-4');
+            let businessName = document.createElement('h3');
+            let industry = document.createElement('p');
+            let logo = document.createElement('img');
+            let address = document.createElement('ul');
+            let email = document.createElement('li');
+            let phone = document.createElement('li');
+            let website = document.createElement('li');
 
 
-        card1.appendChild(businessName);
-        card1.appendChild(industry)
-        card2.appendChild(logo);
-        address.appendChild(email);
-        address.appendChild(phone);
-        address.appendChild(website);
-        card3.appendChild(address);
+            businessName.textContent = `${member.name}`;
+            industry.textContent = `${member.industry}`
+            email.innerHTML = `<strong>email</strong>: ${member.email}`;
+            phone.innerHTML = `<strong>Phone</strong>: ${member.phone_number}`;
+            website.innerHTML = `<strong>Url</strong>: ${member.website_url}`;
+            logo.setAttribute('src', member.image_file);
+            logo.setAttribute('alt', `logo of ${member.name}`);
+            logo.setAttribute('loading', 'lazy');
+            logo.setAttribute('width', '100');
+            logo.setAttribute('height', '100');
 
-        card4.appendChild(card2);
-        card4.appendChild(card3);
+            card.classList.add('card-container');
+            card1.classList.add('card-1');
+            card2.classList.add('card-2');
+            card3.classList.add('card-3');
+            card4.classList.add('card-4');
 
-        card.appendChild(card1);
-        card.appendChild(card4);
-        cards.appendChild(card);
+
+            card1.appendChild(businessName);
+            card1.appendChild(industry)
+            card2.appendChild(logo);
+            address.appendChild(email);
+            address.appendChild(phone);
+            address.appendChild(website);
+            card3.appendChild(address);
+
+            card4.appendChild(card2);
+            card4.appendChild(card3);
+
+            card.appendChild(card1);
+            card.appendChild(card4);
+            cards.appendChild(card);
+        }
+        count += 1;
     });
 }
 cards.classList.add('grid');
