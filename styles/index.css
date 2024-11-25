@@ -204,6 +204,24 @@ dialog button:hover {
     width: 95%;
     display: block;
     margin: 20px auto;
+
+}
+
+h1,
+h2 {
+    animation: 3s linear slide-in;
+}
+
+@keyframes slide-in {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
 }
 
 #courses .required {
