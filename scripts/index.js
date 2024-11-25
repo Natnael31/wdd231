@@ -142,6 +142,27 @@ cse.textContent = 'CSE';
 wdd.textContent = 'WDD';
 course_headers.append(all, cse, wdd);
 
+// Modal code
+
+courseDetails = document.getElementById('course-details');
+function displayCourseDetails(course) {
+    // courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+      <button id="closeModal">❌</button>
+      <h2>${course.subject} ${course.number}</h2>
+      <h3>${course.title}</h3>
+      <p><strong>Credits</strong>: ${course.credits}</p>
+      <p><strong>Certificate</strong>: ${course.certificate}</p>
+      <p>${course.description}</p>
+      <p><strong>Technologies</strong>: ${course.technology}</p>
+    `;
+    courseDetails.showModal();
+
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
+
 
 all.addEventListener("click", () => {
     let tempCard = document.querySelectorAll('.temp');
@@ -149,6 +170,7 @@ all.addEventListener("click", () => {
         element.remove();
     });
     courses.forEach((course) => {
+
         const courseButton = document.createElement('button');
         if (course.completed != true) {
             courseButton.classList.add("required");
@@ -156,7 +178,10 @@ all.addEventListener("click", () => {
         courseButton.textContent = `${course.subject} ${course.number}`;
         courseButton.classList.add('temp');
         course_types.append(courseButton);
+        displayCourseDetails(course);
+
     })
+
 
     credit_hours = courses.reduce((accumulator, currentValue) => {
         return accumulator + parseInt(currentValue.credits);
@@ -166,6 +191,7 @@ all.addEventListener("click", () => {
     credit_hour_heading.textContent = `Total credit hours for all courses are : ${credit_hours}`;
     course_work.append(credit_hour_heading);
     credit_hour_heading.classList.add('temp');
+
 })
 
 
@@ -183,6 +209,7 @@ cse.addEventListener("click", () => {
         courseButton.textContent = `${course.subject} ${course.number}`;
         courseButton.classList.add('temp');
         course_types.append(courseButton);
+        displayCourseDetails(course);
     })
 
     credit_hours = new_courses.reduce((accumulator, currentValue) => {
@@ -210,6 +237,7 @@ wdd.addEventListener("click", () => {
         courseButton.textContent = `${course.subject} ${course.number}`;
         courseButton.classList.add('temp');
         course_types.append(courseButton);
+        displayCourseDetails(course);
     })
 
     credit_hours = new_courses.reduce((accumulator, currentValue) => {
@@ -221,6 +249,8 @@ wdd.addEventListener("click", () => {
     course_work.append(credit_hour_heading);
     credit_hour_heading.classList.add('temp');
 })
+
+
 
 
 
