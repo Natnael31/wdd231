@@ -172,6 +172,7 @@ dialog {
     box-shadow: 0 0 3rem #777;
     width: 90%;
     max-width: 600px;
+    padding: 10px;
 }
 
 ::backdrop {
@@ -209,12 +210,12 @@ dialog button:hover {
 
 h1,
 h2 {
-    animation: 3s linear slide-in;
+    animation: 3s alternate slide-in;
 }
 
 @keyframes slide-in {
     from {
-        translate: 150vw 0;
+        translate: 70vw 0;
         scale: 200% 1;
     }
 
