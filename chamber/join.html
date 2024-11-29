@@ -32,7 +32,7 @@
         <nav>
             <ul id="navigation">
                 <li><a id="home" href="../chamber/index.html">Home</a></li>
-                <li><a id="directory" href="#">Directory</a></li>
+                <li><a id="directory" href="../chamber/directory.html">Directory</a></li>
                 <li><a id="join" href="#">Join</a></li>
                 <li><a id="discover" href="#">Discover</a></li>
             </ul>
@@ -40,58 +40,109 @@
     </header>
 
     <main>
-        <!-- <div id="hero">
-            <img src="images/hero.webp" alt="Hero image" loading="lazy">
-            <div id="keynotes">
-                <ul>
-                    <li><strong>Prof. Dawit</strong> – The Future of Local Business: Trends and Innovations - 9:00am
-                    </li>
-                    <li><strong>Dr. Emilya</strong>Linda Johnson – Building Stronger Communities: The Role of Small
-                        Businesses - 10:00am</li>
-                    <li><strong>Mrs. Betty</strong> – Leveraging Technology for Small Business Success - 11:00am</li>
-                </ul>
-            </div>
-        </div>
+        <section>
+            <h2>Membership Application Form</h2>
+            <form action="thankyou.html" method="get" id="register">
 
-        <div id="main-header">Directory</div>
+                <div>
+                    <label for="first-name">First Name:
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter first name:"
+                            autocomplete="given-name" title="first-name" required>
+                    </label>
 
-        <section id="events">
-            <div id="event-1">
-                <h3>Current Events</h3>
-                <div id="event-list" class="body">event-1 <br>event-2 <br>event-3 <br>event-4 <br>event-5 <br>event-6
-                    <br>event-7
+                    <label for="last-name">Last Name:
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter first name:"
+                            autocomplete="family-name" title="last-name" required>
+                    </label>
+
+                    <label for="organization-title">Organizational Title <span class="black"><em>(must be at least 7
+                                charcters
+                                including "-"
+                                or
+                                whitespace):</em></span>
+                        <input type="text" id="organization-title" name="organization-title"
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="organization-title">
+                    </label>
+
+                    <label for="email">Email:
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" autocomplete="email"
+                            title="email" required>
+                    </label>
+
+                    <label for="phone-number">Phone no:
+                        <input type="tel" id="phone-number" name="phone-number" autocomplete="tel" title="phone-number"
+                            required>
+                    </label>
+
+                    <label for="organization-name">Organization Name:
+                        <input type="text" id="organization-name" name="organization-name" autocomplete="organization"
+                            title="organization-name" required>
+                    </label>
+
+                    <label for="membership">Membership Level:
+                        <select name="membership" id="membership" autocomplete="on" title="membership">
+                            <option value="" disabled selected>Select membership level ...</option>
+                            <option value="0">NP Membership (non-profit organizations)</option>
+                            <option value="1">Bronze Membership</option>
+                            <option value="2">Silver Membership</option>
+                            <option value="3">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label for="organization-description">Organization Description:<span class="black">(optional)</span>
+                        <textarea id="organization-description" name="organization-description" autocomplete="on"
+                            title="organization-description"></textarea>
+                    </label>
+                    <input type="hidden" id="time-stamp" name="time-stamp" title="time-stamp">
                 </div>
+
+                <button type="submit">Apply for Membership</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Membership Levels</h2>
+            <div class="card-container">
+                <h3>Non Profit Membership Level</h3>
+                <a href="#np-modal" class="clicked-modal">Learn More</a>
             </div>
 
-            <div id="weather-1">
-                <h3>Current Weather</h3>
-                <div class="body" id="weather-image">
-                    <div>
-                        <img id="weather-icon" src="../chamber/images/clouds_sunny.svg" alt=" weather Icon"
-                            loading="lazy">
-                    </div>
-                    <div>
-                        <ul id="weather-data">
-
-                        </ul>
-                    </div>
-                </div>
+            <div class="card-container">
+                <h3>Bronze Membership Level</h3>
+                <a href="#bronze-modal" class="clicked-modal">Learn More</a>
             </div>
 
-            <div id="weather-2">
-                <h3>Weather Forecast</h3>
-                <div id="weather-forecast" class="body">
+            <div class="card-container">
+                <h3>Silver Membership Level</h3>
+                <a href="#silver-modal" class="clicked-modal">Learn More</a>
+            </div>
 
-                </div>
+            <div class="card-container">
+                <h3>Gold Membership Level</h3>
+                <a href="#gold-modal" class="clicked-modal">Learn More</a>
             </div>
         </section>
 
-        <div id="buttons">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
-        </div>
-
-        <div id="cards"></div> -->
+        <dialog id="np-modal">
+            <h2>Non Profit Membership Benefits</h2>
+            <p>Non-profit members receive event discounts and networking opportunities at no cost.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
+        <dialog id="bronze-modal">
+            <h2>Bronze Membership Benefits</h2>
+            <p>Bronze members receive training and advertising discounts.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
+        <dialog id="silver-modal">
+            <h2>Silver Membership Benefits</h2>
+            <p>Silver members enjoy enhanced visibility and event sponsorship opportunities.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
+        <dialog id="gold-modal">
+            <h2>Gold Membership Benefits</h2>
+            <p>Gold members receive premium benefits, including spotlight advertising and exclusive training.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
 
     </main>
 

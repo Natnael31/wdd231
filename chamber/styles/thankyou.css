@@ -100,7 +100,7 @@ nav a:hover {
 }
 
 main {
-    margin: 20px 20px;
+    margin: 20px 60px;
 }
 
 main h2 {
@@ -114,162 +114,11 @@ main h2 {
     margin-bottom: -10px;
 }
 
-main form {
-    padding: 15px;
-    background-color: var(--main-background-color);
-    margin: 10px 0px;
-    color: var(--paragraph-color);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-form div {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="date"] {
-    width: 100%;
-    height: 40px;
-}
-
-input[type="text"],
-[type="email"],
-[type="tel"] {
-    width: 100%;
-    height: 40px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-}
-
-select {
-    margin-top: 5px;
-    margin-bottom: 20px;
-}
-
-select:hover {
-    cursor: pointer;
-}
-
-#membership {
-    width: 100%;
-    height: 40px;
-}
-
-#organization-description {
-    width: 100%;
-    height: 100px;
-    margin-top: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 20px;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 1.4em;
-    font-weight: 700;
-    background-color: var(--paragraph-color);
-    color: white;
-}
-
-button:hover {
-    background-color: var(--nav-hover-link-color);
-    color: white;
-    font-weight: 900;
-    transform: scale(1.03);
-    transition: transform 0.2s ease-in-out;
-}
-
-input[type="submit"]:hover {
-    cursor: pointer;
-}
-
-.black {
-    color: black;
-}
-
-.card-container {
-    border-radius: 50px 0px;
-    background-color: var(--main-background-color);
-    align-items: center;
-    padding: 40px;
-    text-align: center;
-    margin-top: 53px;
-}
-
-.card-container h3 {
-    color: var(--paragraph-color);
-    font-size: 1.4rem;
-    margin-bottom: 30px;
-}
-
-.card-container a {
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    background-color: var(--paragraph-color);
-    color: white;
-    width: 200px;
-    margin: 10px auto;
-}
-
-.card-container a:hover {
-    background-color: var(--nav-hover-link-color);
-    color: white;
-    font-weight: 900;
-    transform: scale(1.03);
-    transition: transform 0.2s ease-in-out;
-}
-
-dialog {
-    border: 1px solid rgb(0 0 0 / 0.1);
-    border-radius: 10px;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 0 3rem #1b1b1b;
-    width: 90%;
-    max-width: 300px;
-    padding: 10px;
-}
-
-dialog::backdrop {
-    opacity: 0.4;
-    background-color: #c5bfbf;
-}
-
-dialog button {
-    width: 50%;
-    margin-left: 75px;
-
-}
-
-dialog {
-    animation: 3s alternate slide-in;
-}
-
-@keyframes slide-in {
-    from {
-        translate: 70vw 0;
-        scale: 200% 1;
-    }
-
-    to {
-        translate: 0 0;
-        scale: 100% 1;
-    }
-}
-
-.card-container {
+#data {
     animation: 3s alternate slide-in-vertical;
+    margin: 40px 10px;
+    height: 300px;
+
 }
 
 
@@ -348,29 +197,6 @@ footer a img:hover {
 
     .list {
         display: block;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    }
-
-    .card-container h3 {
-        margin-top: -15px;
-        margin-bottom: 15.5px;
-    }
-
-    .card-container a {
-        width: 150px;
-    }
-
-    dialog {
-        max-width: 600px;
-    }
-
-    dialog button {
-        margin-left: 150px;
     }
 
     footer {
