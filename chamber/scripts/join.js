@@ -55,12 +55,17 @@ discover.addEventListener("click", () => {
 // main code
 
 const timeStamp = document.getElementById('time-stamp');
-const currentDate = new Date();
-const dateSubmitted = currentDate.toLocaleDateString();
-const timeSubmitted = currentDate.toLocaleTimeString();
+const formSubmit = document.getElementById('register');
 
-timeStamp.value = `${dateSubmitted}, ${timeSubmitted}`;
-// console.log(timeStamp.value);
+
+formSubmit.addEventListener('submit', () => {
+    const latestDate = new Date();
+    const dateSubmitted = latestDate.toLocaleDateString();
+    const timeSubmitted = latestDate.toLocaleTimeString();
+
+    timeStamp.value = `${dateSubmitted}, ${timeSubmitted}`;
+    // console.log(timeStamp.value);
+})
 
 
 // modal code
@@ -80,6 +85,7 @@ document.querySelectorAll(".close-modal").forEach(modal => {
 
 
 // Footer code
+const currentDate = new Date();
 let lastModified = new Date(document.lastModified);
 
 let year = document.getElementById("currentyear");
