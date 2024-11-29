@@ -65,7 +65,7 @@ console.log(formData);
 // formData = dataUrl[1].split('&')
 
 formDataArray = formData.split('&');
-console.log(formDataArray);
+// console.log(formDataArray);
 
 formDataArray.forEach((data) => {
     dataValue = data.split('=');
