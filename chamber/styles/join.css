@@ -253,18 +253,18 @@ dialog button {
 }
 
 dialog {
-    animation: 3s alternate slide-in;
+    animation: 3s alternate slide-in-horizontal;
 }
 
-@keyframes slide-in {
-    from {
-        translate: 70vw 0;
-        scale: 200% 1;
+@keyframes slide-in-horizontal {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
     }
 
-    to {
-        translate: 0 0;
-        scale: 100% 1;
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
