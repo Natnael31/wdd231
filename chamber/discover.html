@@ -39,110 +39,65 @@
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Membership Application Form</h2>
-            <form action="thankyou.html" method="get" id="register">
-
-                <div>
-                    <label for="first-name">First Name:
-                        <input type="text" id="first-name" name="first-name" placeholder="Enter first name:"
-                            autocomplete="given-name" title="first-name" required>
-                    </label>
-
-                    <label for="last-name">Last Name:
-                        <input type="text" id="last-name" name="last-name" placeholder="Enter last name:"
-                            autocomplete="family-name" title="last-name" required>
-                    </label>
-
-                    <label for="organization-title">Organizational Title <span class="black"><em>(must be at least 7
-                                charcters
-                                including "-"
-                                or
-                                whitespace):</em></span>
-                        <input type="text" id="organization-title" name="organization-title"
-                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="organization-title">
-                    </label>
-
-                    <label for="email">Email:
-                        <input type="email" id="email" name="email" placeholder="example@gmail.com" autocomplete="email"
-                            title="email" required>
-                    </label>
-
-                    <label for="phone-number">Phone no:
-                        <input type="tel" id="phone-number" name="phone-number" autocomplete="tel" title="phone-number"
-                            required>
-                    </label>
-
-                    <label for="organization-name">Organization Name:
-                        <input type="text" id="organization-name" name="organization-name" autocomplete="organization"
-                            title="organization-name" required>
-                    </label>
-
-                    <label for="membership">Membership Level:
-                        <select name="membership" id="membership" autocomplete="on" title="membership">
-                            <option value="" disabled selected>Select membership level ...</option>
-                            <option value="0">NP Membership (non-profit organizations)</option>
-                            <option value="1">Bronze Membership</option>
-                            <option value="2">Silver Membership</option>
-                            <option value="3">Gold Membership</option>
-                        </select>
-                    </label>
-
-                    <label for="organization-description">Organization Description:<span class="black">(optional)</span>
-                        <textarea id="organization-description" name="organization-description" autocomplete="on"
-                            title="organization-description"></textarea>
-                    </label>
-                    <input type="hidden" id="time-stamp" name="time-stamp" title="time-stamp">
-                </div>
-
-                <button type="submit">Apply for Membership</button>
-            </form>
-        </section>
-
-        <section>
-            <h2>Membership Levels</h2>
-            <div class="card-container">
-                <h3>Non Profit Membership Level</h3>
-                <a href="#np-modal" class="clicked-modal">Learn More</a>
+    <main id="discover-main">
+        <section id="discover-side">
+            <div>
+                <h2>Addis Chamber Overview</h2><br>
+                <p>Established in 1947, AACCSA is a voluntary, non-governmental, business membership organization with
+                    more
+                    than 17,000 member companies. The chamber serves as a credible voice of business and advocates for
+                    the
+                    creation of a conducive business environment. It also promotes trade and industry, disseminating
+                    business information, consulting government and members on economic development and business issues,
+                    establishing friendly relationship with similar chambers in other countries, and exchanging
+                    information
+                    as well as engaging in arbitration in times of disputes among businesses.</p>
             </div>
 
-            <div class="card-container">
-                <h3>Bronze Membership Level</h3>
-                <a href="#bronze-modal" class="clicked-modal">Learn More</a>
+            <div>
+                <h2>Location</h2>
+                <img src="images/Addis-Ababa-arial.webp" id="location-image" alt="Addis-Ababa-arial-view"
+                    loading="lazy">
+                <p>The metro area population of Addis Ababa in 2023 was 5,461,000, a 4.46% increase from 2022. The metro
+                    area population of Addis Ababa in 2022 was 5,228,000, a 4.43% increase from 2021. The metro area
+                    population of Addis Ababa in 2021 was 5,006,000, a 4.42% increase from 2020.</p>
             </div>
 
-            <div class="card-container">
-                <h3>Silver Membership Level</h3>
-                <a href="#silver-modal" class="clicked-modal">Learn More</a>
-            </div>
-
-            <div class="card-container">
-                <h3>Gold Membership Level</h3>
-                <a href="#gold-modal" class="clicked-modal">Learn More</a>
+            <div>
+                <h2>Current Events</h2>
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?src=natystd21%40gmail.com&ctz=Africa%2FNairobi&hl=en"
+                    id="calendar" style="border: 0" width="400" height="400" loading="lazy"></iframe>
             </div>
         </section>
 
-        <dialog id="np-modal">
-            <h2>Non Profit Membership Benefits</h2>
-            <p>Non-profit members receive event discounts and networking opportunities at no cost.</p>
-            <button class="close-modal">Close</button>
-        </dialog>
-        <dialog id="bronze-modal">
-            <h2>Bronze Membership Benefits</h2>
-            <p>Bronze members receive training and advertising discounts.</p>
-            <button class="close-modal">Close</button>
-        </dialog>
-        <dialog id="silver-modal">
-            <h2>Silver Membership Benefits</h2>
-            <p>Silver members enjoy enhanced visibility and event sponsorship opportunities.</p>
-            <button class="close-modal">Close</button>
-        </dialog>
-        <dialog id="gold-modal">
-            <h2>Gold Membership Benefits</h2>
-            <p>Gold members receive premium benefits, including spotlight advertising and exclusive training.</p>
-            <button class="close-modal">Close</button>
-        </dialog>
+        <section id="discover-images">
+            <h2>Famous Destinations</h2>
+            <figure class="">
+                <img src="images/Beheraw.webp" alt="friendship-fountain" loading="lazy">
+                <figcaption>National-Bank</figcaption>
+            </figure>
+
+            <figure class="">
+                <img src="images/meskel-square.webp" alt="friendship-fountain" loading="lazy">
+                <figcaption>Meskel-Square</figcaption>
+            </figure>
+
+            <figure class="">
+                <img src="images/old-supper-house.webp" alt="friendship-fountain" loading="lazy">
+                <figcaption>Old-Feasting-Hall</figcaption>
+            </figure>
+
+            <figure class="">
+                <img src="images/trinity-church.webp" alt="friendship-fountain" loading="lazy">
+                <figcaption>Trinity-Church</figcaption>
+            </figure>
+
+            <figure class="">
+                <img src="images/friendship-fountain.webp" alt="friendship-fountain" loading="lazy">
+                <figcaption>Friendship-Fountain</figcaption>
+            </figure>
+        </section>
 
     </main>
 

@@ -272,7 +272,6 @@ dialog {
     animation: 3s alternate slide-in-vertical;
 }
 
-
 @keyframes slide-in-vertical {
     0% {
         transform: translateY(100%);
@@ -283,6 +282,38 @@ dialog {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+p {
+    text-indent: 50px;
+}
+
+#location-image {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#calendar {
+    width: 100%;
+    margin-top: 30px;
+}
+
+figure {
+    border-radius: 0 0;
+    animation: 3s alternate slide-in-vertical;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: -25px;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    padding: 10px;
 }
 
 footer {
@@ -364,11 +395,24 @@ footer a img:hover {
     }
 
     dialog {
-        max-width: 600px;
+        max-width: 400px;
     }
 
     dialog button {
-        margin-left: 150px;
+        margin-left: 100px;
+    }
+
+    #discover-main img:hover {
+        cursor: pointer;
+        box-shadow: 5px 5px 5px 5px rgb(196, 196, 196);
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #calendar:hover {
+        cursor: pointer;
+        transform: scale(1.03);
+        transition: transform 0.3s ease-in-out;
     }
 
     footer {
