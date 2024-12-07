@@ -94,7 +94,7 @@ if (pageVistCount == 1) {
         // }, 500);
         message.textContent = 'Back so soon! Awesome!';
         display.append(message);
-
+        localStorage.setItem('firstDate', Math.floor(Date.now() / 3600000));
     } else if (currentDate - firstDate == 24) {
         // setTimeout(() => {
         //     alert('You last visited one day ago');
@@ -109,12 +109,14 @@ if (pageVistCount == 1) {
         if (((currentDate - firstDate) % 24) == 0) {
             message.textContent = `You last visited ${(currentDate - firstDate) / 24} days ago`;
             display.append(message);
+            localStorage.setItem('firstDate', Math.floor(Date.now() / 3600000));
         } else {
             message.textContent = `You last visited ${Math.floor((currentDate - firstDate) / 24) + 1} days ago`;
             display.append(message);
+            localStorage.setItem('firstDate', Math.floor(Date.now() / 3600000));
         }
 
-        localStorage.setItem('firstDate', Math.floor(Date.now() / 3600000));
+
     }
 
 
