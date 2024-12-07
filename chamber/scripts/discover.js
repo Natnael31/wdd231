@@ -64,32 +64,39 @@ console.log(pageVistCount)
 if (pageVistCount == 1) {
     alert('Welcome! Let us know if you have any questions.')
     var firstDate = Number(localStorage.getItem('firstDate'));
-    localStorage.setItem('firstDate', Date.now());
+    localStorage.setItem('firstDate', Math.floor(Date.now() / 3600000));
+
+    // localStorage.removeItem('firstDate')
+    // localStorage.removeItem('currentDate');
 
 } else {
     firstDate = Number(localStorage.getItem('firstDate'));
-    let pastDate = new Date(firstDate);
-    let pastDate_day = pastDate.getDate();
-    console.log(pastDate_day);
+    // let pastDate = new Date(firstDate);
+    // let pastDate_day = pastDate.getDate();
+    console.log(firstDate);
 
     let currentDate = Number(localStorage.getItem('currentDate'));
-    localStorage.setItem('currentDate', Date.now());
+    localStorage.setItem('currentDate', Math.floor(Date.now() / 3600000));
 
     currentDate = Number(localStorage.getItem('currentDate'));
-    let presentDate = new Date(currentDate);
-    let presentDate_day = presentDate.getDate();
-    console.log(presentDate_day);
+    // let presentDate = new Date(currentDate);
+    // let presentDate_day = presentDate.getDate();
+    console.log(currentDate);
 
-    if (presentDate_day - pastDate_day == 0) {
-        alert('Back so soon! Awesome!');
-    } else if (presentDate_day - pastDate_day == 1) {
+    if (currentDate - firstDate < 24) {
+        setTimeout(() => {
+            alert('Back so soon! Awesome!');
+        }, 500);
+
+    } else if (currentDate - firstDate == 24) {
         alert('You last visited one day ago');
+        localStorage.setItem('firstDate', Math.floor(Date.now() / 3600000));
     } else {
-        alert(`You last visited ${presentDate_day - pastDate_day} days ago`);
+        alert(`You last visited ${(currentDate - firstDate) / 24} days ago`);
+        localStorage.setItem('firstDate', Math.floor(Date.now() / 3600000));
     }
 
 
-    // localStorage.removeItem('firstDate')
 
 }
 

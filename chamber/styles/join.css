@@ -296,6 +296,8 @@ p {
 #calendar {
     width: 100%;
     margin-top: 30px;
+    height: 400px;
+    border: 0px;
 }
 
 figure {
@@ -404,7 +406,7 @@ footer a img:hover {
 
     #discover-main img:hover {
         cursor: pointer;
-        box-shadow: 5px 5px 5px 5px rgb(196, 196, 196);
+        box-shadow: 3px 3px 3px 3px rgb(196, 196, 196);
         transform: scale(1.1);
         transition: transform 0.3s ease-in-out;
     }
