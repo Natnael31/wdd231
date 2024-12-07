@@ -200,6 +200,7 @@ input[type="submit"]:hover {
     padding: 40px;
     text-align: center;
     margin-top: 53px;
+    animation: 3s alternate slide-in-vertical;
 }
 
 .card-container h3 {
@@ -268,10 +269,6 @@ dialog {
     }
 }
 
-.card-container {
-    animation: 3s alternate slide-in-vertical;
-}
-
 @keyframes slide-in-vertical {
     0% {
         transform: translateY(100%);
@@ -299,16 +296,6 @@ dialog {
     height: 400px;
     border: 0px;
 }
-
-/* figure {
-    border-radius: 0 0;
-    animation: 3s alternate slide-in-vertical;
-    align-items: center;
-    padding: 40px;
-    text-align: center;
-    margin-top: -10px;
-    margin-bottom: -25px;
-} */
 
 #discover-images img {
     max-width: 100%;
