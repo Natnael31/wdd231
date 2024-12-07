@@ -319,9 +319,9 @@ dialog {
     text-align: center;
 }
 
-/* figcaption {
-    padding: 10px;
-} */
+#display-message h3 {
+    padding: 35px;
+}
 
 footer {
     background-color: var(--nav-background-color);
