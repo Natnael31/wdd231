@@ -284,13 +284,13 @@ dialog {
     }
 }
 
-p {
+#discover-side p {
     text-indent: 50px;
 }
 
 #location-image {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #calendar {
@@ -300,7 +300,7 @@ p {
     border: 0px;
 }
 
-figure {
+/* figure {
     border-radius: 0 0;
     animation: 3s alternate slide-in-vertical;
     align-items: center;
@@ -308,15 +308,20 @@ figure {
     text-align: center;
     margin-top: -10px;
     margin-bottom: -25px;
+} */
+
+#discover-images img {
+    max-width: 100%;
+    margin-top: 20px;
 }
 
-figure img {
-    width: 100%;
+#discover-images p {
+    text-align: center;
 }
 
-figcaption {
+/* figcaption {
     padding: 10px;
-}
+} */
 
 footer {
     background-color: var(--nav-background-color);
@@ -407,7 +412,7 @@ footer a img:hover {
     #discover-main img:hover {
         cursor: pointer;
         box-shadow: 3px 3px 3px 3px rgb(196, 196, 196);
-        transform: scale(1.1);
+        transform: scale(1.03);
         transition: transform 0.3s ease-in-out;
     }
 
