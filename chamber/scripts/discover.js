@@ -106,8 +106,14 @@ if (pageVistCount == 1) {
         // setTimeout(() => {
         //     alert(`You last visited ${(currentDate - firstDate) / 24} days ago`);
         // }, 500);
-        message.textContent = `You last visited ${(currentDate - firstDate) / 24} days ago`;
-        display.append(message);
+        if (((currentDate - firstDate) % 24) == 0) {
+            message.textContent = `You last visited ${(currentDate - firstDate) / 24} days ago`;
+            display.append(message);
+        } else {
+            message.textContent = `You last visited ${Math.floor((currentDate - firstDate) / 24) + 1} days ago`;
+            display.append(message);
+        }
+
         localStorage.setItem('firstDate', Math.floor(Date.now() / 3600000));
     }
 
