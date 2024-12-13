@@ -65,7 +65,7 @@ register.addEventListener("click", () => {
 })
 
 // main code
-const url = "https://www.googleapis.com/youtube/v3/search?q=html+tutorial&channelId=UC8butISFwT-Wl7EV0hUK0BQ&key=AIzaSyBLT8S-sR5wwwefeuh04E3n9VQOe9AA0eg&part=snippet,id&maxResults=9"
+const url = "https://www.googleapis.com/youtube/v3/search?q=html+tutorial&key=AIzaSyBBzEiBEUhWXPLQO2efYlCxLI4IMMYv-c4&part=snippet,id&maxResults=9"
 const cards = document.getElementById('home-cards');
 
 let getVideos = async () => {
@@ -86,11 +86,6 @@ let getVideos = async () => {
 }
 
 getVideos();
-
-
-
-
-
 
 // Footer code
 let currentDate = new Date();

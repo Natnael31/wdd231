@@ -39,29 +39,41 @@
         </nav>
     </header>
 
-    <main>
-        <section id="section_1">
-            <h2>Course Work</h2>
-            <div id="course_work"></div>
-        </section>
-        <section id="section_2">
-            <h2>Gondar, Ethiopia</h2>
-            <div id="main_image">
-                <img src="images/chilada-2.webp" alt="Ethiopian Chilada baboon" loading="lazy">
-            </div>
-        </section>
-        <section id="section_3">
-            <h2>Web and Computer Programming Certificate</h2>
+    <main id="register_content">
+        <form action="thankyou.html" method="get" id="submit_registration">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" autocomplete="given-name" placeholder="Enter name:" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter email:" required>
+
+            <label for="phone_no">Phone_no:</label>
+            <input type="number" name="phone_no" id="phone_no" autocomplete="tel" placeholder="Enter phone_no:"
+                required>
+
+            <label for="message">Message (optional):</label>
+            <textarea name="message" id="message" rows="5"></textarea>
+
+            <label for="submit">Please fill out the form and click the button below</label>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        <div>
+            <h2>Company Information</h2>
+            <h3>Address</h3>
             <div>
-                <div id="course_headers">
-
+                <div>
+                    <p><b>Location:</b> Ethiopia, Addis Ababa, Gulele K/K</p><br>
+                    <p><b>Phone number:</b> +251931677672</p><br>
+                    <p><b>Email:</b> <a target="new" href="https://www.gmail.com">natystd21@gmail.com</a></p><br>
                 </div>
-                <dialog id="course-details"></dialog>
-                <div id="courses">
-
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31520.025615047987!2d38.72333289657468!3d9.063471204154022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f3289bb508f%3A0x447717f14dd9c0c3!2sGulele%2C%20Addis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sjp!4v1729522066568!5m2!1sen!2sjp"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>

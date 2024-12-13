@@ -210,6 +210,104 @@ button:hover {
 
 }
 
+small {
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.thumbnails img {
+    border-radius: 30px;
+}
+
+#register_content {
+    margin: 20px 20px;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background-color: #eee;
+    color: #22211f;
+}
+
+form {
+    border-bottom: 1px solid #ccc;
+}
+
+label {
+    display: block;
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 60%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--body-font);
+    color: #544B3D;
+}
+
+input[type="radio"] {
+    margin-left: 20px;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #22211f;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: var(--body-font);
+    display: block;
+    width: 60%;
+    margin-bottom: 20px;
+
+}
+
+
+form button:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+    background-color: rgb(1, 1, 54);
+    color: var(--nav-hover-background-color);
+}
+
+#data-h2 {
+    margin: 40px 50px;
+}
+
+#data {
+    animation: 3s alternate slide-in-vertical;
+    margin: 40px 50px;
+    height: 300px;
+}
+
+@keyframes slide-in-vertical {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 footer {
     background-color: var(--nav-background-color);
     text-align: center;
@@ -285,6 +383,15 @@ footer a img:hover {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px;
+    }
+
+    #register_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    form {
+        border-bottom: none;
     }
 
     footer {

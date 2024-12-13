@@ -1,3 +1,7 @@
+// import ES module's display function
+
+import { displayItems } from "./display.js";
+
 // header code
 
 // Burger code
@@ -59,12 +63,28 @@ register.addEventListener("click", () => {
     js.classList.remove('active')
 })
 
+// main code
+const url = "https://www.googleapis.com/youtube/v3/search?q=javascript+tutorial&key=AIzaSyBBzEiBEUhWXPLQO2efYlCxLI4IMMYv-c4&part=snippet,id&maxResults=9"
+const cards = document.getElementById('home-cards');
+
+let getVideos = async () => {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data.items);
+
+        data.items.forEach(element => {
+            cards.append(displayItems(element));
+        });
 
 
+    } catch (error) {
+        console.log(error);
+    }
 
+}
 
-
-
+getVideos();
 
 
 //  Footer code
