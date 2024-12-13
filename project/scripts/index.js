@@ -59,10 +59,22 @@ register.addEventListener("click", () => {
     js.classList.remove('active')
 })
 
+// Main code
 
+// modal code
+document.querySelectorAll(".clicked-modal").forEach(click => {
+    click.addEventListener("click", (e) => {
+        e.preventDefault();
+        const clickedModal = e.target.getAttribute("href").substring(1);
+        document.getElementById(clickedModal).showModal();
+    });
+});
 
-
-
+document.querySelectorAll(".close-modal").forEach(modal => {
+    modal.addEventListener("click", (e) => {
+        e.target.closest("dialog").close();
+    });
+});
 
 
 // Footer code
