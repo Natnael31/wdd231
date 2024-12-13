@@ -43,11 +43,6 @@ header div h1 {
     padding-left: 10px;
 }
 
-h1 small {
-    font-size: 0.5em;
-    display: block;
-}
-
 nav ul li {
     display: none;
 }
@@ -112,22 +107,24 @@ nav a:hover {
     color: white;
 }
 
-main #events,
-#buttons,
-#cards {
-    text-align: center;
-    color: var(--paragraph-color);
+main {
     margin: 20px 20px;
 }
 
-
-#hero {
+#section_1 {
     position: relative;
 }
 
-#hero img {
+#section_1 img {
     width: 100%;
-    /* margin-top: -10px; */
+}
+
+#intro {
+    position: absolute;
+    top: 100px;
+    width: 90%;
+    padding: 20px;
+    margin-left: 15px;
 }
 
 
@@ -139,7 +136,7 @@ main #events,
     cursor: pointer;
     padding: 20px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     background-color: var(--paragraph-color);
     color: white;
@@ -154,35 +151,30 @@ main #events,
     color: white;
     background-color: var(--nav-hover-link-color);
     transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
 }
 
-main h3 {
-    text-align: left;
-    background-color: var(--nav-background-color);
-    color: white;
+#section_1 h2 {
+    text-align: center;
+    color: var(--paragraph-color);
+}
+
+#section_2 {
+    color: var(--paragraph-color);
+    text-align: center;
+}
+
+#section_2 img {
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
     padding: 10px;
 }
 
-.body {
-    text-align: left;
-    background-color: #CEBACF;
-    margin-top: -19px;
-}
-
-main ul li {
-    list-style: none;
-    text-align: left;
-    margin-left: 20px;
-}
-
-#main-header {
-    text-align: left;
-    font-size: 1.5rem;
+#section_2 p {
     font-weight: 900;
-    margin-top: 10px;
-    margin-bottom: -20px;
-    margin-left: 20px;
-    color: var(--paragraph-color);
+    font-size: 20px;
+    padding: 10px;
 }
 
 button {
@@ -208,71 +200,14 @@ button:hover {
     transition: transform 0.2s ease-in-out;
 }
 
-#weather-image img {
-    width: 50px;
-    margin-left: 100px;
+#home-cards div {
+    box-shadow: 4px 4px 4px rgba(36, 34, 34, 0.253);
 }
 
-#event-1,
-#weather-1,
-#weather-2 {
-    padding: 5px;
-}
+#home-cards div:hover {
+    transform: scale(1.08);
+    transition: transform 0.5s ease-in-out;
 
-#event-list {
-    color: var(--main-background-color);
-}
-
-#weather-1 ul {
-    margin-left: -40px;
-    font-size: 1.2em;
-}
-
-#weather-image {
-    display: flex;
-
-}
-
-#weather-2 div {
-    padding-bottom: 25px;
-}
-
-#weather-2 p {
-    padding-top: 20px;
-    padding-left: 40px;
-    font-size: 1.7em;
-}
-
-#buttons {
-    margin: 20px;
-}
-
-.card-container {
-    border-radius: 10px;
-    background-color: var(--main-background-color);
-    align-items: center;
-}
-
-.card-1 {
-    border-bottom: 1px solid gray;
-}
-
-.card-3 {
-    margin-left: -20px;
-}
-
-.card-4 {
-    display: flex;
-    font-size: 0.9rem;
-    padding: 10px;
-    border-top: 1px solid grey;
-}
-
-#cards h3 {
-    color: var(--paragraph-color);
-    background-color: var(--main-background-color);
-    text-align: center;
-    margin-bottom: -25px;
 }
 
 footer {
@@ -320,8 +255,6 @@ footer a img:hover {
 
     }
 
-
-
     nav::before {
         display: none;
     }
@@ -331,46 +264,27 @@ footer a img:hover {
         padding: 5px 20px;
     }
 
+    #intro {
+        top: 330px;
+        font-size: 15px;
+        color: white;
+    }
+
     #join-button {
-        text-decoration: none;
-        top: 300px;
+        font-size: 20px;
+        width: 30%;
+        top: 415px;
     }
 
-    #keynotes {
-        font-size: 0.9em;
-        width: 400px;
-        bottom: 20px;
+    #section_2 img {
+        width: 250px;
+        height: 250px;
     }
 
-    #events {
+    #home-cards {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-    }
-
-    #weather-image img {
-        margin-left: 20px;
-        width: 56px;
-    }
-
-
-    #weather-1 ul {
-        font-size: 0.8em;
-    }
-
-    #weather-2 p {
-        padding-top: 0px;
-        font-size: 1em;
-        padding-left: 10px;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 10px;
-    }
-
-    .list {
-        display: block;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
     }
 
     footer {
