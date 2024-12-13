@@ -202,6 +202,7 @@ button:hover {
 
 #home-cards div {
     box-shadow: 4px 4px 4px rgba(36, 34, 34, 0.253);
+    padding: 10px;
 }
 
 #home-cards div:hover {
@@ -277,7 +278,6 @@ dialog {
         opacity: 1;
     }
 }
-
 
 small {
     overflow: hidden;
