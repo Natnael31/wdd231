@@ -65,7 +65,7 @@ register.addEventListener("click", () => {
 })
 
 // main code
-const url = "https://www.googleapis.com/youtube/v3/search?q=html+tutorial&type=video&key=AIzaSyBBzEiBEUhWXPLQO2efYlCxLI4IMMYv-c4&part=snippet,id&maxResults=9"
+const url = "https://www.googleapis.com/youtube/v3/search?q=html+tutorial&type=video&key=AIzaSyDgrubx6lxCtJHSIF7-HWX3PZmOBUeQQg0&part=snippet,id&maxResults=9"
 const cards = document.getElementById('home-cards');
 
 let getVideos = async () => {
